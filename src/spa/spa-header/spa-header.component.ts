@@ -9,7 +9,7 @@ import { MenuService } from '../services/menu.service';
 })
 export class SpaHeaderComponent implements OnInit {
 
-  constructor(readonly screenService: ScreenService, readonly menuService: MenuService) { }
+  constructor(public screenService: ScreenService, public menuService: MenuService) { }
 
   ngOnInit() {
   }
