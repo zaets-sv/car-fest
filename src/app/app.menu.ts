@@ -3,14 +3,78 @@ export const AppMenuItems: Array<MenuItem> = [
   {
     text: 'Cars',
     icon: 'assets/images/car.png',
-    route: '/cars',
-    submenu: []
+    route: "",
+    submenu:
+      [
+        {
+          text: 'Select',
+          icon: 'assets/images/car.png',
+          route: "",
+          submenu: [
+            {
+              text: 'Ferrary',
+              icon: 'assets/images/car.png',
+              route: '/car-detail/Ferrary',
+              submenu: []
+            },
+            {
+              text: 'Bugatti',
+              icon: 'assets/images/car.png',
+              route: '/car-detail/Bugatti',
+              submenu: []
+            },
+            {
+              text: 'Lamborghini',
+              icon: 'assets/images/car.png',
+              route: '/car-detail/Lamborghini',
+              submenu: []
+            },
+            {
+              text: 'Mazeratti',
+              icon: 'assets/images/car.png',
+              route: '/car-detail/Mazeratti',
+              submenu: []
+            },
+          ]
+        },
+        {
+          text: 'Price top',
+          icon: 'assets/images/car.png',
+          route: '/car-list/1',
+          submenu: []
+        },
+        {
+          text: 'Top 3',
+          icon: 'assets/images/car.png',
+          route: '/car-list/3',
+          submenu: []
+        },
+        {
+          text: 'Top 5',
+          icon: 'assets/images/car.png',
+          route: '/car-list/5',
+          submenu: []
+        }
+      ]
   },
   {
     text: 'Maintenance',
     icon: 'assets/images/settings.png',
-    route: '/settings',
-    submenu: []
+    route: "",
+    submenu: [
+      {
+        text: 'Car maint',
+        icon: 'assets/images/settings.png',
+        route: '/car-maint',
+        submenu: []
+      },
+      {
+        text: 'Settings',
+        icon: 'assets/images/settings.png',
+        route: '/settings',
+        submenu: []
+      }
+    ]
   },
   {
     text: 'Home',
@@ -18,4 +82,4 @@ export const AppMenuItems: Array<MenuItem> = [
     route: '/home',
     submenu: []
   },
-]
+];

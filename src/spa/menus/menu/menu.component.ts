@@ -8,7 +8,7 @@ import { MenuService } from '../../services/menu.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(readonly menuService: MenuService) { }
+  constructor(public menuService: MenuService) { }
 
   ngOnInit() {
   }
