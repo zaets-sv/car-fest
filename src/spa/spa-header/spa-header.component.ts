@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from '../services/screen.service';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'spa-header',
@@ -8,9 +9,8 @@ import { ScreenService } from '../services/screen.service';
 })
 export class SpaHeaderComponent implements OnInit {
 
-  constructor(public screenService: ScreenService) { }
+  constructor(readonly screenService: ScreenService, readonly menuService: MenuService) { }
 
   ngOnInit() {
   }
-
 }
