@@ -1,5 +1,6 @@
 :host {
   background-color: #16484b;
+  position: relative;
 }
 
 .title-bar {
@@ -19,7 +20,9 @@
   flex-grow: 1;
   padding-right: 20px;
 }
-
+.headerLogo{
+    width:280px;
+}
 .title-bar-small {
   flex-grow: 1;
   display: flex;
@@ -41,11 +44,60 @@
   }
 
 .small-image-holder {
-  flex-grow: 1;
-  padding: 10px 0;
+  padding: 10px;
   display: flex;
 }
 
 .small-image {
   height: 100px;
+}
+
+.car {
+  position: absolute;
+  bottom: 0;
+  left: 26%;
+  width: 370px;
+}
+.car img {
+  width: 370px;
+  animation: car 1s linear infinite;
+}
+
+@keyframes car {
+  100% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(1px);
+  }
+
+  0% {
+    transform: translateY(-1px);
+  }
+}
+
+.wheel {
+  left: 45%;
+  margin-top: -63px;
+}
+
+  .wheel img {
+    width: 65px;
+    height: 65px;
+    animation: wheel 1s linear infinite;
+  }
+
+.back-wheel {
+  margin-left: 47px;
+}
+
+.front-wheel {
+    margin-left: 163px; 
+}
+
+@keyframes wheel {
+  100% {
+    transform: rotate(360deg);
+  }
 }

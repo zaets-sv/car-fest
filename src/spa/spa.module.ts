@@ -9,6 +9,7 @@ import { IconBarComponent } from './icon-bar/icon-bar.component';
 import { ScreenService } from './services/screen.service';
 import { ScreenSmallDirective } from './directives/screen-small.directive';
 import { ScreenLargeDirective } from './directives/screen-large.directive';
+import { ScreenMiddleDirective } from './directives/screen-middle.directive';
 import { MenuService } from './services/menu.service';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
@@ -16,15 +17,18 @@ import { RouterModule } from '@angular/router';
 import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 import { SignInComponent } from './users/sign-in/sign-in.component';
 import { RegistrationComponent } from './users/registration/registration.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DynamicFieldComponent } from './dynamicForms/dynamic-field/dynamic-field.component';
+import { DynamicFormComponent } from './dynamicForms/dynamic-form/dynamic-form.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   declarations: [SpaBodyComponent, SpaHeaderComponent, SpaContentComponent, SpaFooterComponent,
-    IconBarComponent, ScreenSmallDirective, ScreenLargeDirective,
-    MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent
+    IconBarComponent, ScreenSmallDirective, ScreenLargeDirective, ScreenMiddleDirective,
+    MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent,
+    DynamicFieldComponent, DynamicFormComponent
   ],
-  exports: [SpaBodyComponent],
+  exports: [SpaBodyComponent, DynamicFormComponent],
   providers: [SpaConfigService, ScreenService, MenuService]
 })
 export class SpaModule { }

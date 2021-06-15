@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  background: dimgray;
+}
+
+table {
+  margin-top: 20px;
+}
+
+.btn-sm {
+  width: 60px;
+  margin-left: 5px;
+}
+h3{
+    color: white;
+}

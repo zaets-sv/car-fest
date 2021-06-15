@@ -1,17 +1,33 @@
 <div *screenLarge class='title-bar'>
-  <img src="assets/images/logo.png" alt="Car fest logo">
+  <div class="headerLogo">
+    <img src="assets/images/logo.png" alt="Car fest logo">
+  </div>
+
+  <div *screenMiddle class="car">
+    <img src="../../../assets/images/carAnimation//car.png" alt="">
+    <div class="wheel">
+      <img src="../../assets/images/carAnimation//wheel.png" alt="" class="back-wheel">
+      <img src="../../assets/images/carAnimation//wheel.png" alt="" class="front-wheel">
+    </div>
+  </div>
+
   <div class="menu-area">
     <icon-bar [showIcons]='flagForIcons'></icon-bar>
     <spa-menu *ngIf="!menuService.isVertical"></spa-menu>
   </div>
 </div>
 
-<div *screenSmall class='title-bar-small'>
+<div *screenSmall class='title-bar-small d-flex justify-content-between'>
   <div class="small-icon-holder">
-    <a><img src="src/imgs/menu.png" (click)='menuService.toggleMenu()'></a>
+    <a><img src="assets/images/menu.png" (click)='menuService.toggleMenu()'></a>
   </div>
-  <icon-bar [showIcons]='!flagForIcons'></icon-bar>
+
+  <div>
+    <img src="assets/images/car.png" alt="Car fest logo" class="small-image">
+  </div>
+
   <div class="small-image-holder">
-    <img src="assets/images/menu.png" alt="Car fest logo" class="small-image">
+    <icon-bar [showIcons]='!flagForIcons'></icon-bar>
   </div>
 </div>
+
