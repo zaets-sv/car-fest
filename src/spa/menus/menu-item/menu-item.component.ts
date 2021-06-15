@@ -16,7 +16,7 @@ export class MenuItemComponent implements OnInit {
   popupLeft = 0;
   popupTop = 42;
   isActiveRoute = false;
-  constructor(readonly menuService: MenuService,
+  constructor(public menuService: MenuService,
     private router: Router,
     private el: ElementRef,
     private renderer: Renderer2) { }
@@ -72,8 +72,8 @@ export class MenuItemComponent implements OnInit {
       const newEvent = new MouseEvent('mouseleave', { bubbles: true });
       (this.el.nativeElement as any)['dispatchEvent'].apply(this.el.nativeElement, [newEvent]);
       //this.renderer.invokeElementMethod(this.el.nativeElement, 'dispatchEvent', [newEvent]);
-      this.router.navigate([this.item.route]);
+      //this.router.navigate([this.item.route]);
     }
+    this.router.navigate([this.item.route]);
   }
-
 }
