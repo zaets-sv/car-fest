@@ -14,25 +14,25 @@ export const AppMenuItems: Array<MenuItem> = [
             {
               text: 'Ferrary',
               icon: 'assets/images/car.png',
-              route: '/car-detail/Ferrary',
+              route: '/authenticated/car-detail/Ferrary',
               submenu: []
             },
             {
               text: 'Bugatti',
               icon: 'assets/images/car.png',
-              route: '/car-detail/Bugatti',
+              route: '/authenticated/car-detail/Bugatti',
               submenu: []
             },
             {
               text: 'Lamborghini',
               icon: 'assets/images/car.png',
-              route: '/car-detail/Lamborghini',
+              route: '/authenticated/car-detail/Lamborghini',
               submenu: []
             },
             {
               text: 'Mazeratti',
               icon: 'assets/images/car.png',
-              route: '/car-detail/Mazeratti',
+              route: '/authenticated/car-detail/Mazeratti',
               submenu: []
             },
           ]
@@ -40,19 +40,19 @@ export const AppMenuItems: Array<MenuItem> = [
         {
           text: 'Price top',
           icon: 'assets/images/car.png',
-          route: '/car-list/1',
+          route: '/authenticated/car-list/1',
           submenu: []
         },
         {
           text: 'Top 3',
           icon: 'assets/images/car.png',
-          route: '/car-list/3',
+          route: '/authenticated/car-list/3',
           submenu: []
         },
         {
           text: 'Top 5',
           icon: 'assets/images/car.png',
-          route: '/car-list/5',
+          route: '/authenticated/car-list/5',
           submenu: []
         }
       ]
@@ -65,13 +65,13 @@ export const AppMenuItems: Array<MenuItem> = [
       {
         text: 'Car maint',
         icon: 'assets/images/settings.png',
-        route: '/car-maint',
+        route: '/authenticated/car-maint',
         submenu: []
       },
       {
         text: 'Settings',
         icon: 'assets/images/settings.png',
-        route: '/settings',
+        route: '/authenticated/settings',
         submenu: []
       }
     ]
@@ -79,7 +79,7 @@ export const AppMenuItems: Array<MenuItem> = [
   {
     text: 'Home',
     icon: 'assets/images/home.png',
-    route: '/home',
+    route: 'authenticated/home',
     submenu: []
   },
 ];
