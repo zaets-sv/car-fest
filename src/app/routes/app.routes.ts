@@ -8,7 +8,6 @@ import { AuthenticatedComponent } from './authenticated/authenticated.component'
 import { SignInComponent } from '../../spa/users/sign-in/sign-in.component';
 import { RegistrationComponent } from '../../spa/users/registration/registration.component';
 import { AuthGuard } from '../services/auth-guard.service';
-
 export const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegistrationComponent },
@@ -19,7 +18,7 @@ export const appRoutes: Routes = [
           { path: 'home', component: AppHomeComponent },
           { path: 'settings', component: SettingsComponent },
           { path: 'car-list/:count', component: CarListComponent },
-          { path: 'car-detail/:car', component: CarDetailComponent },
+          { path: 'car-detail/:id/:operation', component: CarDetailComponent },
           { path: 'car-maint', component: CarMaintComponent }
         ]
       }

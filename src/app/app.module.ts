@@ -14,6 +14,8 @@ import { AuthenticatedComponent } from './routes/authenticated/authenticated.com
 import { UserService } from './services/user.service';
 import { UserApi } from '../spa/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
+import { AppDataService } from './services/app-data.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +27,13 @@ import { AuthGuard } from './services/auth-guard.service';
     AuthenticatedComponent
   ],
   imports: [
-    BrowserModule, SpaModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), FormsModule
   ],
   providers: [UserService,
     {
       provide: UserApi, useExisting: UserService
     },
-    AuthGuard],
+    AuthGuard, AppDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
