@@ -9,5 +9,5 @@
   </span>
 </div>
 
-<spa-popup-menu *ngIf="mouseInPopup || mouseInItem" [menu]='item.submenu' [ngClass]='{"vertical-menu": menuService.isVertical}'
+<spa-popup-menu @visibilityPopup *ngIf="mouseInPopup || mouseInItem" [menu]='item.submenu' [ngClass]='{"vertical-menu": menuService.isVertical}'
                 [style.left]='popupLeft+"px"' [style.top]='popupTop+"px"' (mouseleave)='onPopupMouseLeave($event)' (mouseenter)='onPopupMouseEnter($event)'></spa-popup-menu>

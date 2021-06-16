@@ -33,7 +33,10 @@ export class CarMaintComponent implements OnInit {
   }
   deleteCar(id: number) {
     this.isDeleting = true;
-    this.appDataService.deleteCar(id).subscribe(c => this.cancelDelete(),
+    this.appDataService.deleteCar(id).subscribe(c => {
+      this.cancelDelete();
+      this.CarList = this.CarList.filter(carItem => carItem.id !== id);
+    },
       error => {
         this.deleteError = error;
         this.isDeleting = false;
@@ -41,6 +44,6 @@ export class CarMaintComponent implements OnInit {
   }
   cancelDelete() {
     this.isDeleting = false;
-    this.deleteId = 0;
+    this.deleteId = -1;
   }
 }

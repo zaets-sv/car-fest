@@ -4,7 +4,7 @@
   </a>
 </div>
 <div [ngClass]='{"forSmall" : !showIcons}' *ngIf="spaConfigService.showUserControls">
-  <span>User name</span>
+  <span>Hello, {{userInfo}}</span>
   <button *ngIf="!showLoader" class="btn btn-sm btn-warning" (click)='signOut()'>Sign out</button>
   <img src='assets/images/loaderOut.gif' *ngIf="showLoader">
 </div>

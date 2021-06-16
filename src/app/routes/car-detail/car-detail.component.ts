@@ -3,10 +3,12 @@ import { FieldInput } from '../../../spa/dynamicForms/field-interface';
 import { Car } from '../../services/car-interface';
 import { AppDataService } from '../../services/app-data.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { visibility } from '../../../spa/services/animations';
 @Component({
   selector: 'app-car-detail',
   templateUrl: './car-detail.component.html',
-  styleUrls: ['./car-detail.component.css']
+  styleUrls: ['./car-detail.component.css'],
+  animations: [visibility]
 })
 export class CarDetailComponent implements OnInit {
   car!: Car;
@@ -43,7 +45,7 @@ export class CarDetailComponent implements OnInit {
   operation!: string; // edit/ read/ create
   errorMessage!: string;
   constructor(
-    public router: Router, public route: ActivatedRoute, public appDataService: AppDataService
+    private router: Router, private route: ActivatedRoute, private appDataService: AppDataService
   ) { }
 
   ngOnInit() {
