@@ -20,15 +20,18 @@ import { RegistrationComponent } from './users/registration/registration.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicFieldComponent } from './dynamicForms/dynamic-field/dynamic-field.component';
 import { DynamicFormComponent } from './dynamicForms/dynamic-form/dynamic-form.component';
+import { PanelComponent } from './panel/panel.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, HttpModule],
   declarations: [SpaBodyComponent, SpaHeaderComponent, SpaContentComponent, SpaFooterComponent,
     IconBarComponent, ScreenSmallDirective, ScreenLargeDirective, ScreenMiddleDirective,
     MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent,
-    DynamicFieldComponent, DynamicFormComponent
+    DynamicFieldComponent, DynamicFormComponent, PanelComponent
   ],
-  exports: [SpaBodyComponent, DynamicFormComponent],
+  exports: [SpaBodyComponent, DynamicFormComponent, PanelComponent, ScreenLargeDirective, ScreenMiddleDirective, ScreenSmallDirective],
   providers: [SpaConfigService, ScreenService, MenuService]
 })
 export class SpaModule { }
