@@ -20,7 +20,9 @@
 
   .menu-item:hover {
     transform: scale(1.05);
-   background-color: rgba(207, 58, 58, 0.8);
+    border-radius: 5px;
+    background-image: linear-gradient(to right top, #092a5b, #092c60, #082e65, #08306a, #08326f);
+    /*background-color: rgba(207, 58, 58, 0.8);*/
   }
 
 .icon {

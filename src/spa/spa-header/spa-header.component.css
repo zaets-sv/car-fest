@@ -1,5 +1,6 @@
 :host {
-  background-color: #16484b;
+  background-image: linear-gradient(to right top, #052451, #03375f, #114a6c, #275c76, #3f6f80);
+  /* background-color: #16484b;*/
   position: relative;
 }
 

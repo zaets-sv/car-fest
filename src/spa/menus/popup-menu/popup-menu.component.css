@@ -2,7 +2,8 @@
   position: absolute;
   display: inline-block;
   width: 160px;
-  background-color: #16484b;
+  background-image: linear-gradient(to right top, #051937, #051c3d, #051e44, #05214a, #052451);
+  /*background-color: #16484b;*/
   /* border: 1px solid black;*/
   z-index: 1;
   box-shadow: 2px 2px 5px #bcbcbc;

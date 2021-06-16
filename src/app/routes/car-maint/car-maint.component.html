@@ -24,12 +24,12 @@
             <button class="btn btn-sm btn-warning" (click)='editCar(item.id)'>Edit</button>
             <button class="btn btn-sm btn-danger" (click)='deleteCarQuestion(item.id)'>Delete</button>
           </td>
-          <td class='col-lg-4 col-sm-4 col-3' *ngIf="item.id === deleteId && !isDeleting">
+          <td class='col-lg-3 col-sm-3 col-2' *ngIf="item.id === deleteId && !isDeleting">
             <button class="btn btn-sm btn-light" (click)='cancelDelete()'>Cancel</button>
             <button class="btn btn-sm btn-danger" (click)='deleteCar(item.id)'>Delete</button> Delete this car?
             <p *ngIf="deleteError">{{deleteError}}</p>
           </td>
-          <td class='col-lg-4 col-sm-4 col-3' *ngIf="item.id === deleteId && isDeleting">
+          <td class='col-lg-3 col-sm-3 col-2' *ngIf="item.id === deleteId && isDeleting">
             Deleting ...
             <img src="assets/images/deleteLoader.gif">
           </td>

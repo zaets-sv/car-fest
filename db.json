@@ -32,9 +32,9 @@
     },
     {
       "id": 7,
-      "name": "123456",
-      "model": "12345",
-      "price": 12345
+      "name": "qwerty",
+      "model": "qaz",
+      "price": 10000
     }
   ],
   "users": [
@@ -67,6 +67,18 @@
       "email": "test@mail.ru",
       "password": "123",
       "id": 5
+    },
+    {
+      "name": "1234",
+      "email": "test@mail.ru",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "sfgh",
+      "email": "test@mail.ru",
+      "password": "123",
+      "id": 7
     }
   ]
 }

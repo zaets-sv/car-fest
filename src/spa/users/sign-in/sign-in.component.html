@@ -10,14 +10,19 @@
       <div class="alert alert-danger" [hidden]='password.valid || password.pristine'>Password is required</div>
     </div>
     <div class='alert alert-danger' *ngIf="formError">{{formError}}</div>
-    <div *ngIf="!submitting">
-      <button routerLink='/register' class='btn btn-success'>Register</button>
-      <button [disabled]='signInForm.invalid' type='submit' class='btn btn-primary'>Sign in</button>
+
+    <div class="button">
+      <div *ngIf="!submitting">
+        <button routerLink='/register' class='btn btn-success'>Register</button>
+        <button [disabled]='signInForm.invalid' type='submit' class='btn btn-primary'>Sign in</button>
+      </div>
+
+      <div *ngIf="submitting">
+        <span><img src='assets/images/loaderIn.gif'></span>
+        <span class='message'>Signing in ...</span>
+      </div>
     </div>
-    <div *ngIf="submitting">
-      <span><img src='assets/images/loaderIn.gif'></span>
-      <span class='message'>Signing in ...</span>
-    </div>
+    
 
   </form>
 </div>
