@@ -25,3 +25,10 @@ button.btn-primary {
 span > img {
   margin-left: 5%;
 }
+
+.form-group{
+    margin-top: 10px;
+}
+.button {
+  margin-top: 20px;
+}

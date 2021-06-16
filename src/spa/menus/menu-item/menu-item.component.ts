@@ -18,7 +18,7 @@ export class MenuItemComponent implements OnInit {
   popupLeft = 0;
   popupTop = 42;
   isActiveRoute = false;
-  constructor(public menuService: MenuService,
+  constructor(readonly menuService: MenuService,
     private router: Router,
     private el: ElementRef,
     private renderer: Renderer2) { }
@@ -45,7 +45,7 @@ export class MenuItemComponent implements OnInit {
     }
   }
   @HostListener('mouseleave', ['$event'])
-  onMouseLeave(): void {
+  onMouseLeave(event: Event): void {
     if (!this.menuService.isVertical) {
       this.mouseInItem = false;
     }
@@ -65,6 +65,7 @@ export class MenuItemComponent implements OnInit {
 
   @HostListener('click', ['$event'])
   onClick(event: Event): void {
+    console.log("route --> " + this.item.route);
     event.stopPropagation();
     if (this.item.submenu) {
       if (this.menuService.isVertical) {
@@ -73,9 +74,13 @@ export class MenuItemComponent implements OnInit {
     } else if (this.item.route) {
       const newEvent = new MouseEvent('mouseleave', { bubbles: true });
       (this.el.nativeElement as any)['dispatchEvent'].apply(this.el.nativeElement, [newEvent]);
+
       //this.renderer.invokeElementMethod(this.el.nativeElement, 'dispatchEvent', [newEvent]);
-      //this.router.navigate([this.item.route]);
+      this.router.navigate([this.item.route]);
     }
-    this.router.navigate([this.item.route]);
+    if (this.item.route) {
+      this.router.navigate([this.item.route]);
+    }
   }
+
 }

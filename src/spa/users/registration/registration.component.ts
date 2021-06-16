@@ -13,6 +13,7 @@ import { UserApi } from '../user-api';
 export class RegistrationComponent implements OnInit {
   registering = false;
   hasAdded = false;
+  formError = false;
 
   constructor(private router: Router, private userApi: UserApi) { }
   onSubmit(registerForm: NgForm) {

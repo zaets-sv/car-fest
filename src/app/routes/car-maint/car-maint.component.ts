@@ -44,6 +44,6 @@ export class CarMaintComponent implements OnInit {
   }
   cancelDelete() {
     this.isDeleting = false;
-    this.deleteId = -1;
+    this.deleteId = 0;
   }
 }

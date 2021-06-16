@@ -1,6 +1,7 @@
 :host {
-    min-height: 30px;
-    background-color: #16484b;
+  min-height: 30px;
+  background-image: linear-gradient(to right top, #052451, #002449, #00243f, #002234, #001f2a);
+  /* background-color: #16484b;*/
 }
 
 div {

@@ -12,6 +12,7 @@ export class DynamicFieldComponent implements OnInit {
   @Input() form!: FormGroup;
   @Input() operation!: string;
   @Input() submitted!: boolean;
+
   get isValid() {
     return this.form.controls[this.field.key].valid;
   }
@@ -21,4 +22,3 @@ export class DynamicFieldComponent implements OnInit {
   }
 
 }
-

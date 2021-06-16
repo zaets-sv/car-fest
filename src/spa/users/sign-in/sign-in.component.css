@@ -17,7 +17,12 @@
   margin: 5px 10px;
   border-radius: 10% 0;
 }
-
+.form-group{
+    margin-top: 10px;
+}
+.button {
+  margin-top: 20px;
+}
 h4 {
   text-align: center;
 }

@@ -22,7 +22,8 @@ li {
   height: 100vh;
   padding-left: 4px;
   flex-grow: 0;
-  background-color: rgb(53, 133, 138);
+  background-image: linear-gradient(to right top, #051937, #051c3d, #051e44, #05214a, #052451);
+ /* background-color: rgb(53, 133, 138);*/
   overflow-x: hidden;
   overflow-y: auto;
 }
