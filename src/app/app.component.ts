@@ -13,10 +13,10 @@ export class AppComponent {
   constructor(private spaConfigService: SpaConfigService, private menuService: MenuService) {
     const config: SpaConfigSettings = {
       socialIcons: [
-        { imageFile: 'assets/images/facebook.png', alt: 'Facebook', url: 'http://facebook.com' },
-        { imageFile: 'assets/images/instagram.png', alt: 'Instargram', url: 'http://www.instagram.com' },
-        { imageFile: 'assets/images/twitter.png', alt: 'Twitter', url: 'http://twitter.com' },
-        { imageFile: 'assets/images/whatsapp.png', alt: 'WhatsApp', url: 'http://www.whatsapp.com' },
+        { imageFile: 'https://img.icons8.com/ios/100/ffffff/facebook--v1.png', alt: 'Facebook', url: 'http://facebook.com' },
+        { imageFile: 'https://img.icons8.com/ios/100/ffffff/instagram-new--v1.png', alt: 'Instargram', url: 'http://www.instagram.com' },
+        { imageFile: 'https://img.icons8.com/ios/100/ffffff/twitter--v1.png', alt: 'Twitter', url: 'http://twitter.com' },
+        { imageFile: 'https://img.icons8.com/ios/50/ffffff/whatsapp--v1.png', alt: 'WhatsApp', url: 'http://www.whatsapp.com' },
       ],
       showUserControls: true
     };

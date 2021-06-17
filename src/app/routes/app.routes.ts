@@ -15,6 +15,7 @@ export const appRoutes: Routes = [
     path: 'authenticated', component: AuthenticatedComponent, canActivate: [AuthGuard], children: [
       {
         path: '', canActivateChild: [AuthGuard], children: [
+          { path: '', redirectTo: 'home', pathMatch: 'full' },
           { path: 'home', component: AppHomeComponent },
           { path: 'settings', component: SettingsComponent },
           { path: 'car-list/:count', component: CarListComponent },

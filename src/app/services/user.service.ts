@@ -5,13 +5,25 @@ import { Observable, of, throwError } from 'rxjs';
 import { delay, map, catchError } from 'rxjs/operators';
 import { Http, Response } from '@angular/http';
 import { User } from '../../spa/services/user.interface';
+import { CookieService } from 'ngx-cookie-service';
+
+
 @Injectable()
 export class UserService implements UserApi {
-  isAuthenticated = false;
+  isAuthenticated! : boolean;
   private url = 'http://localhost:3000/users';
-  constructor(public router: Router, public http: Http) {
+    
+  constructor(public router: Router, public http: Http, private cookieService: CookieService) {
 
+    const cookieExists: boolean = this.cookieService.check('authenticated');
+    if (cookieExists) {
+      this.isAuthenticated = true;
+      console.log('cookieExists -> ' + cookieExists);
+    } else {
+      this.isAuthenticated = false;
+    }
   }
+  
   signIn(email: string, password: string): Observable<any> {
     return this.http.get(this.url).pipe(delay(2000), map((response: Response) => {
       const arrayFilter: User[] = response.json().filter((item: User) =>
@@ -29,6 +41,7 @@ export class UserService implements UserApi {
     this.isAuthenticated = false;
     localStorage.clear();
     this.router.navigate(['/sign-in']);
+    this.cookieService.delete('authenticated');
     return of({});
   }
   registerUser(registerForm: User) {

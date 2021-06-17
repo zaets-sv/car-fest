@@ -1,3 +1,13 @@
 <div>
+
+  <div *ngIf="showFotterIcons">
+    <a *ngFor="let icon of spaConfigService.socialIcons" [href]="icon.url" [title]='icon.alt' target='_blank'>
+      <img class='top-img' [src]="icon.imageFile" [alt]="icon.alt">
+    </a>
+  </div>
+
+  <div>
     &copy; {{year}} {{title}}
+  </div>
 </div>
+

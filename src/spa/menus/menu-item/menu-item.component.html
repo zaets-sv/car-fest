@@ -1,6 +1,6 @@
 <div class='menu-item' [ngClass]="{'vertical-menu': menuService.isVertical, 'active': isActiveRoute}">
   <span class='icon'><img [src]='item.icon'></span>
-  <span>{{item.text}}</span>
+  <span style="margin-left: 7px">{{item.text}}</span>
   <span *ngIf="item.submenu && !menuService.isVertical">
     <span [ngClass]='parentIsPopup ? "dropright": "dropdown"'><button></button></span>
    <!-- <span [ngClass]='parentIsPopup ? "dropright": "dropdown"'><button class='dropdown-toggle'></button></span>-->

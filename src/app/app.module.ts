@@ -18,6 +18,7 @@ import { AppDataService } from './services/app-data.service';
 import { FormsModule } from '@angular/forms';
 import { CarPanelComponent } from './panels/car-panel/car-panel.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ImagePanelComponent } from './panels/image-panel/image-panel.component'
   imports: [
     BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), FormsModule
   ],
-  providers: [UserService,
+  providers: [UserService, CookieService, 
     {
       provide: UserApi, useExisting: UserService
     },
