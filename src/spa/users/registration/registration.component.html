@@ -21,8 +21,8 @@
         <button [disabled]='registerForm.invalid' type='submit' class='btn btn-primary'>Register</button>
       </div>
       <div *ngIf="registering && !hasAdded">
-        <span class='message'>Registering new user ...</span>
-        <span><img src='assets/images/loaderIn.gif'></span>
+        <span class='message'>Registering new user</span>
+        <span><img class="loaderImage" src='assets/images/loaderIn.gif'></span>
       </div>
       <div *ngIf="hasAdded">
         <span class='message'>New user has added to database</span>

@@ -41,6 +41,7 @@ span {
 
   .forSmall span {
     margin: 0;
+    margin-bottom: 5px;
   }
 
   .forSmall button {

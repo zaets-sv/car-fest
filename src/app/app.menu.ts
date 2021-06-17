@@ -14,7 +14,7 @@ export const AppMenuItems: Array<MenuItem> = [
             {
               text: 'Ferrary',
               icon: 'assets/images/car.png',
-              route: '/authenticated/car-detail/Ferrary',
+              route: '/authenticated/car-detail/3',
               submenu: []
             },
             {

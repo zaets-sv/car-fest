@@ -81,6 +81,7 @@ export class MenuItemComponent implements OnInit {
     if (this.item.route) {
       this.router.navigate([this.item.route]);
     }
+  
   }
 
 }
