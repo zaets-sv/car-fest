@@ -22,7 +22,7 @@ export class ScreenMiddleDirective implements OnInit {
   }
   @Input()
   set screenMiddle(condition: any) {
-    console.log("this.screenService.screenWidth -> " + this.screenService.screenWidth)
+    // console.log("this.screenService.screenWidth -> " + this.screenService.screenWidth)
     condition = this.screenService.screenWidth >= this.screenService.middlePixels;
    
     if (condition && !this.hasView) {

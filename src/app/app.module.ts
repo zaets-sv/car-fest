@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { CarPanelComponent } from './panels/car-panel/car-panel.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 import { CookieService } from 'ngx-cookie-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { CookieService } from 'ngx-cookie-service';
     ImagePanelComponent
   ],
   imports: [
-    BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), FormsModule
+    BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), FormsModule, HttpClientModule
   ],
   providers: [UserService, CookieService, 
     {

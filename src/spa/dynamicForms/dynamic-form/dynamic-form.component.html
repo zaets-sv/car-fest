@@ -6,8 +6,8 @@
   </div>
 </h3>
 <div>
-  <form  [formGroup]='form'>
-  <!--<form (ngSubmit)="onSubmit()" [formGroup]='form'>-->
+<!--  <form  [formGroup]='form'>-->
+  <form (ngSubmit)="onSubmit()" [formGroup]='form'>
     <div *ngFor="let field of vmDefinition">
       <spa-dynamic-field [field]='field' [form]='form' [operation]='operation' [submitted]='submitted'></spa-dynamic-field>
     </div>
