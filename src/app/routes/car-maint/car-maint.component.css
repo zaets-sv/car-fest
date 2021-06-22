@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background: dimgray;
+  background-image: linear-gradient(to right top, #6d7685, #6c7687, #6b7688, #6a778a, #69778c);
 }
 
 table {

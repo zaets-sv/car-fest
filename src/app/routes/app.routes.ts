@@ -8,6 +8,7 @@ import { AuthenticatedComponent } from './authenticated/authenticated.component'
 import { SignInComponent } from '../../spa/users/sign-in/sign-in.component';
 import { RegistrationComponent } from '../../spa/users/registration/registration.component';
 import { AuthGuard } from '../services/auth-guard.service';
+
 export const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegistrationComponent },
@@ -15,7 +16,6 @@ export const appRoutes: Routes = [
     path: 'authenticated', component: AuthenticatedComponent, canActivate: [AuthGuard], children: [
       {
         path: '', canActivateChild: [AuthGuard], children: [
-          { path: '', redirectTo: 'home', pathMatch: 'full' },
           { path: 'home', component: AppHomeComponent },
           { path: 'settings', component: SettingsComponent },
           { path: 'car-list/:count', component: CarListComponent },

@@ -14,25 +14,25 @@ export const AppMenuItems: Array<MenuItem> = [
             {
               text: 'Ferrary',
               icon: 'assets/images/car.png',
-              route: '/authenticated/car-detail/3',
+              route: '/authenticated/car-detail/1/details',
               submenu: []
             },
             {
               text: 'Bugatti',
               icon: 'assets/images/car.png',
-              route: '/authenticated/car-detail/Bugatti',
+              route: '/authenticated/car-detail/2/details',
               submenu: []
             },
             {
               text: 'Lamborghini',
               icon: 'assets/images/car.png',
-              route: '/authenticated/car-detail/Lamborghini',
+              route: '/authenticated/car-detail/3/details',
               submenu: []
             },
             {
               text: 'Mazeratti',
               icon: 'assets/images/car.png',
-              route: '/authenticated/car-detail/Mazeratti',
+              route: '/authenticated/car-detail/4/details',
               submenu: []
             },
           ]
@@ -53,6 +53,12 @@ export const AppMenuItems: Array<MenuItem> = [
           text: 'Top 5',
           icon: 'assets/images/car.png',
           route: '/authenticated/car-list/5',
+          submenu: []
+        },
+        {
+          text: 'The cheapest',
+          icon: 'assets/images/car.png',
+          route: '/authenticated/car-list/7',
           submenu: []
         }
       ]

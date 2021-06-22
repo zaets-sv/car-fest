@@ -29,7 +29,18 @@ export class CarListComponent implements OnInit {
   updateList() {
     const AllCarsCopy = this.allCars.slice().sort(this.compareSort);
     this.cars = (this.count > 0) ? AllCarsCopy.slice(0, this.count) : this.allCars;
+
+    if (this.count === 7) {
+      const cheapCarsCopy = this.allCars.slice().sort(this.compareCheapSort);
+      this.cars = (this.count > 0) ? cheapCarsCopy.slice(0, this.allCars.length) : this.allCars;
+    }
+
   }
+
+  compareCheapSort(carA: { price: number; }, carB: { price: number; }) {
+    return carA.price - carB.price;
+  }
+
   compareSort(carA: { price: number; }, carB: { price: number; }) {
     return carB.price - carA.price;
   }

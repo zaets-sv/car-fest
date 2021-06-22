@@ -12,6 +12,11 @@ import { visibility } from '../../../spa/services/animations';
 })
 export class CarDetailComponent implements OnInit {
   car!: Car;
+  
+  carId!: number;
+  carName!: string;
+  carModel!: string;
+  carPrice!: number;
   carDefinitionInput: Array<FieldInput> = [
     {
       key: 'id',
@@ -53,10 +58,12 @@ export class CarDetailComponent implements OnInit {
     if (this.operation === 'create') {
       this.car = { id: 0, name: '', model: '', price: 0 };
     } else {
-
-      this.appDataService.getCar(+this.route.snapshot.params['id']).subscribe((car: Car) => this.car = car);
-      console.log("...car --> " + this.appDataService.getCar(+this.route.snapshot.params['id']).subscribe((car: Car) => this.car = car));
-      console.log("this.car --> " + this.car);
+      //console.log("appDataService --> ", this.appDataService.getCar(+this.route.snapshot.params['id']));
+      
+      this.appDataService.getCar(+this.route.snapshot.params['id']).subscribe((car: any) => {
+        this.car = car[0];
+      })
+        
     }
   }
   createCar(car: Car) {

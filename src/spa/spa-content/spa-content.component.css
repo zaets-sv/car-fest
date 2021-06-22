@@ -5,9 +5,11 @@
   overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
+  background-image: linear-gradient(to right top, #6d7685, #6c7687, #6b7688, #6a778a, #69778c);
 }
 
 .body-style {
+  background-image: linear-gradient(to right top, #6d7685, #6c7687, #6b7688, #6a778a, #69778c);
   padding: 22px;
   flex-grow: 1;
 }

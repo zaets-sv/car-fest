@@ -45,6 +45,7 @@ export class DynamicFormComponent implements OnInit, OnChanges {
     });
   }
   ngOnChanges(changes: SimpleChanges) {
+    //console.log("changes['errorMessage'] -> " + changes['errorMessage'])
     if (changes['errorMessage'].currentValue && this.status === 'waiting') {
       this.status = '';
     }
@@ -73,4 +74,7 @@ export class DynamicFormComponent implements OnInit, OnChanges {
       this.create.emit(this.form.value);
     }
   }
+     onSubmit() {
+     
+   }
 }
