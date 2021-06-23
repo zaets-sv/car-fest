@@ -1,6 +1,6 @@
 <div style="padding-bottom: 25px" class="main">
   <h3>Car maintenence</h3>
-  <button class="btn btn-primary" (click)='createCar()'>Add new car</button>
+  <button class="btn btn-primary" [hidden]='hideContentForUser' (click)='createCar()'>Add new car</button>
 
   <div class="container-fluid">
     <table class="table table-striped table-hover table-dark">
@@ -20,9 +20,10 @@
           <td class='col-lg-3 col-sm-3 col-3'>{{item.model}}</td>
           <td class='col-lg-2 col-sm-2 col-3'>{{item.price}}</td>
           <td class='col-lg-3 col-sm-3 col-2' *ngIf="item.id != deleteId">
+
             <button class="btn btn-sm btn-primary" (click)='showCarDetail(item.id)'>Details</button>
-            <button class="btn btn-sm btn-warning" (click)='editCar(item.id)'>Edit</button>
-            <button class="btn btn-sm btn-danger" (click)='deleteCarQuestion(item.id)'>Delete</button>
+            <button class="btn btn-sm btn-warning" [hidden]='hideContentForUser' (click)='editCar(item.id)'>Edit</button>
+            <button class="btn btn-sm btn-danger" [hidden]='hideContentForUser' (click)='deleteCarQuestion(item.id)'>Delete</button>
           </td>
           <td class='col-lg-3 col-sm-3 col-2' *ngIf="item.id === deleteId && !isDeleting">
             <button class="btn btn-sm btn-light" (click)='cancelDelete()'>Cancel</button>

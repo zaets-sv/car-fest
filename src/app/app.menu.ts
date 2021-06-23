@@ -86,6 +86,13 @@ export const AppMenuItems: Array<MenuItem> = [
     text: 'Home',
     icon: 'assets/images/home.png',
     route: 'authenticated/home',
-    submenu: []
+    submenu: [
+      {
+        text: 'My cars',
+        icon: 'assets/images/settings.png',
+        route: '/authenticated/my-cars',
+        submenu: []
+      }
+    ]
   },
 ];

@@ -4,49 +4,57 @@
       "id": 1,
       "name": "Ford",
       "model": "Focus",
-      "price": 5200
+      "price": 5200,
+      "isBought": false
     },
     {
       "id": 2,
       "name": "BMW",
       "model": "X5",
-      "price": 5500
+      "price": 5500,
+      "isBought": false
     },
     {
       "id": 3,
       "name": "Mazda",
       "model": "636",
-      "price": 1500
+      "price": 1500,
+      "isBought": false
     },
     {
       "id": 4,
       "name": "Chery",
       "model": "QQ",
-      "price": 900
+      "price": 900,
+      "isBought": false
     },
     {
       "id": 5,
       "name": "Fiat",
       "model": "Doblo",
-      "price": 4900
+      "price": 4900,
+      "isBought": false
     },
     {
       "id": 6,
       "name": "Siat",
       "model": "Lion2",
-      "price": 666
+      "price": 666,
+      "isBought": false
     },
     {
       "id": 7,
       "name": "Qwerty",
       "model": "qaz",
-      "price": 10000
+      "price": 10000,
+      "isBought": false
     },
     {
       "id": 8,
       "name": "Lady",
       "model": "Gaga",
-      "price": 100
+      "price": 100,
+      "isBought": false
     }
   ],
   "users": [
@@ -161,13 +169,6 @@
       "adminRole": false,
       "password": "12345",
       "id": 16
-    },
-    {
-      "name": "www",
-      "email": "test@mail.ru",
-      "adminRole": true,
-      "password": "12345",
-      "id": 17
     }
   ]
 }
