@@ -14,8 +14,13 @@ export class RegistrationComponent implements OnInit {
   registering = false;
   hasAdded = false;
   formError = false;
+  isChecked!: false;
 
-  constructor(private router: Router, private userApi: UserApi) { }
+  constructor(private router: Router, private userApi: UserApi) {
+    if (this.isChecked === undefined) {
+      this.isChecked = false;
+    }
+  }
   onSubmit(registerForm: NgForm) {
     this.registering = true;
     this.userApi.registerUser(registerForm.value).subscribe(() => {

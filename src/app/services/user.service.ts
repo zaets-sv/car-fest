@@ -29,8 +29,16 @@ export class UserService implements UserApi {
       const arrayFilter: User[] = response.json().filter((item: User) =>
         item.email === email && item.password === password);
       if (arrayFilter.length !== 0) {
+
+        let adminRole = JSON.stringify(arrayFilter[0].adminRole);
+        console.log("adminRole = " + adminRole);
+        if (adminRole === "true") {
+          //this.router.navigate(['/authenticated/car-list/3'])
+        }
+
         this.isAuthenticated = true;
         localStorage.setItem('user', JSON.stringify(arrayFilter[0]));
+
       } else {
         throw new Error('Invalid email or password');
       }
@@ -44,9 +52,11 @@ export class UserService implements UserApi {
     this.cookieService.delete('authenticated');
     return of({});
   }
+
   registerUser(registerForm: User) {
     return this.http.post(this.url, {
       name: registerForm.name, email: registerForm.email,
+      adminRole: registerForm.adminRole,
       password: registerForm.password
     });
   }

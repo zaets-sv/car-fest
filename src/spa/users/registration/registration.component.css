@@ -22,10 +22,6 @@ button.btn-primary {
   float: right;
 }
 
-/*span > img {
-  margin-left: 5%;
-}*/
-
 .form-group{
     margin-top: 10px;
 }
@@ -38,4 +34,8 @@ button.btn-primary {
   height: 20px;
   margin-top: 7px;
  /* margin-left: -25px;*/
+}
+
+.form-check{
+    margin-top: 10px;
 }

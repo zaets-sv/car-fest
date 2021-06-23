@@ -25,10 +25,18 @@ export class SignInComponent implements OnInit {
     if (signInForm.valid) {
       this.submitting = true;
       this.formError = '';
-      this.userApi.signIn(signInForm.value.email, signInForm.value.password).subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/authenticated']);
+      this.userApi.signIn(signInForm.value.email, signInForm.value.password, signInForm.value.adminRole ).subscribe((data) => {
 
+        console.log("data -> " + data);
+        let parseValueAdminRole : any = localStorage.getItem('user');
+        let adminRole = JSON.parse(parseValueAdminRole).adminRole;
+
+        console.log('adminRole: ', adminRole)
+        if (adminRole === true) {
+          this.router.navigate(['/authenticated/car-list/5']);
+        } else {
+          this.router.navigate(['/authenticated']);
+        }
         this.cookieService.set('authenticated', signInForm.value.email);
       },
         (error) => {
