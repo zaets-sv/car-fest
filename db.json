@@ -51,82 +51,123 @@
   ],
   "users": [
     {
-      "name": "Alex",
-      "email": "alex@gmail.com",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "adminRole": false,
       "password": "12345",
       "id": 1
     },
     {
       "name": "Serhey",
       "email": "patokha@gmail.com",
+      "adminRole": false,
       "password": "12345",
       "id": 2
     },
     {
       "name": "sdfghhgfd",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 3
     },
     {
       "name": "ccccc",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 4
     },
     {
       "name": "45678",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 5
     },
     {
       "name": "1234",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 6
     },
     {
       "name": "sfgh",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 7
     },
     {
       "name": "Test",
       "email": "test@mail.ru",
+      "adminRole": true,
       "password": "12345",
       "id": 8
     },
     {
       "name": "asdfgh",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 9
     },
     {
       "name": "12345",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 10
     },
     {
       "name": "1234",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 11
     },
     {
       "name": "34",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 12
     },
     {
       "name": "345",
       "email": "test@mail.ru",
+      "adminRole": false,
       "password": "123",
       "id": 13
+    },
+    {
+      "name": "1234567",
+      "email": "test@mail.ru",
+      "adminRole": false,
+      "password": "12345",
+      "id": 14
+    },
+    {
+      "name": "111",
+      "email": "test@mail.ru",
+      "adminRole": false,
+      "password": "12345",
+      "id": 15
+    },
+    {
+      "name": "222",
+      "email": "test@mail.ru",
+      "adminRole": false,
+      "password": "12345",
+      "id": 16
+    },
+    {
+      "name": "www",
+      "email": "test@mail.ru",
+      "adminRole": true,
+      "password": "12345",
+      "id": 17
     }
   ]
 }

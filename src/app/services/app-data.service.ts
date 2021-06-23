@@ -29,8 +29,7 @@ export class AppDataService {
     return this.http.get(this.url).pipe(map((response: Response) => {
 
       this.CarsCollection = response.json();
-
-      console.log("this.CarsCollection -> " , this.CarsCollection);
+      //console.log("this.CarsCollection -> " , this.CarsCollection);
       return this.CarsCollection;
     }), catchError((error: Response) => throwError('Server do not response')));
   }
