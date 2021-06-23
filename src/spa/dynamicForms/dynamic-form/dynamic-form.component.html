@@ -6,7 +6,6 @@
   </div>
 </h3>
 <div>
-<!--  <form  [formGroup]='form'>-->
   <form (ngSubmit)="onSubmit()" [formGroup]='form'>
     <div *ngFor="let field of vmDefinition">
       <spa-dynamic-field [field]='field' [form]='form' [operation]='operation' [submitted]='submitted'></spa-dynamic-field>
@@ -17,7 +16,7 @@
     <div *ngIf="status != 'waiting'">
       <div style="margin-top: 15px" *ngIf="operation === 'details'">
         <button type="button" class="btn btn-primary" (click)='onBack()'>Go Back</button>
-        <button type="button" class="btn btn-secondary" (click)='onEdit()'>Edit</button>
+        <button type="button" [hidden]='hideContentForUser' class="btn btn-secondary" (click)='onEdit()'>Edit</button>
       </div>
       <div style="margin-top: 15px" *ngIf="operation === 'edit'">
         <button type="button" class="btn btn-primary" (click)='onCancel()'>Cancel</button>

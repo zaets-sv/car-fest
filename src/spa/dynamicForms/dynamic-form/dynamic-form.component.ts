@@ -14,6 +14,7 @@ export class DynamicFormComponent implements OnInit, OnChanges {
   @Input() vmDefinition!: Array<FieldInput>;
   @Input() operation!: string;
   @Input() errorMessage!: string;
+  @Input() hideContentForUser!: boolean;
   @Output() update: EventEmitter<any> = new EventEmitter();
   @Output() create: EventEmitter<any> = new EventEmitter();
 
@@ -21,10 +22,8 @@ export class DynamicFormComponent implements OnInit, OnChanges {
   status!: string;
   submitted = false;
   vmCopy: any;
-  constructor(
-    private route: ActivatedRoute, private router: Router,
-    private location: Location
-  ) {
+  constructor( private route: ActivatedRoute, private router: Router, private location: Location) {
+    this.hideContentForUser = !JSON.parse(localStorage.getItem('user')!).adminRole
   }
   clearForm() {
     const group: any = {};

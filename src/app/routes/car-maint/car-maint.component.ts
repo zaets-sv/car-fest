@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Car } from 'src/app/services/car-interface';
 import { Router } from '@angular/router';
 import { AppDataService } from 'src/app/services/app-data.service';
@@ -10,11 +10,13 @@ import { AppDataService } from 'src/app/services/app-data.service';
 })
 export class CarMaintComponent implements OnInit {
   CarList?: Array<Car>;
+  @Input() hideContentForUser!: boolean;
   deleteError?: string | null;
   deleteId?: number | null;
   isDeleting = false;
   constructor(private router: Router, private appDataService: AppDataService) {
     appDataService.getCars().subscribe((data) => { this.CarList = data; });
+    this.hideContentForUser = !JSON.parse(localStorage.getItem('user')!).adminRole
    }
 
   ngOnInit() {

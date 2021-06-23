@@ -54,13 +54,15 @@
 .index-small {
   display: flex;
   width: 24px;
-  background-color: gray;
-  color: rgb(235, 227, 227);
+  background-color: #ddd;
+  color: #333;
   font-size: 20px;
   align-items: center;
   justify-content: center;
 }
-
+  .index-small span {
+    color: #333;
+  }
 .car-img-small {
   display: flex;
   align-items: center;
@@ -87,7 +89,7 @@
   font-size: 16px;
   width: 90px;
   color: #ffffff;
-  background-color: rgb(216, 94, 94);
+  background-color: red;
   align-items: center;
   justify-content: center;
 }
@@ -95,4 +97,19 @@
 .group,
 .group-small {
   margin-bottom: 15px;
+}
+
+.div-buy {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+.div-buy-small {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 15px;
 }

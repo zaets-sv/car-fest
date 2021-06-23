@@ -18,6 +18,7 @@ export class CarListComponent implements OnInit {
   ngOnInit() {
     this.appDataService.getCars().subscribe(allItems => {
       this.allCars = allItems;
+      //console.log("this.allCars" + this.allCars);
       this.count = +this.route.snapshot.params['count'];
       this.updateList();
       this.route.params.forEach((params: Params) => {
@@ -26,6 +27,7 @@ export class CarListComponent implements OnInit {
       });
     });
   }
+
   updateList() {
     const AllCarsCopy = this.allCars.slice().sort(this.compareSort);
     this.cars = (this.count > 0) ? AllCarsCopy.slice(0, this.count) : this.allCars;
@@ -34,7 +36,6 @@ export class CarListComponent implements OnInit {
       const cheapCarsCopy = this.allCars.slice().sort(this.compareCheapSort);
       this.cars = (this.count > 0) ? cheapCarsCopy.slice(0, this.allCars.length) : this.allCars;
     }
-
   }
 
   compareCheapSort(carA: { price: number; }, carB: { price: number; }) {

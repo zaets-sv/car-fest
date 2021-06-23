@@ -18,14 +18,14 @@ export class SignInComponent implements OnInit {
   cookieValue!: string;
 
   constructor(private userApi: UserApi, private userService: UserService, private router: Router, private cookieService: CookieService) { }
-  onSubmit(signInForm: NgForm): void {
 
+  onSubmit(signInForm: NgForm): void {
     this.cookieService.delete(signInForm.value.email);
 
     if (signInForm.valid) {
       this.submitting = true;
       this.formError = '';
-      this.userApi.signIn(signInForm.value.email, signInForm.value.password, signInForm.value.adminRole ).subscribe((data) => {
+      this.userApi.signIn(signInForm.value.email, signInForm.value.password).subscribe((data) => {
 
         console.log("data -> " + data);
         let parseValueAdminRole : any = localStorage.getItem('user');
