@@ -20,6 +20,7 @@ import { CarPanelComponent } from './panels/car-panel/car-panel.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
+import { MyCarsComponent } from './routes/my-cars/my-cars.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     CarMaintComponent,
     AuthenticatedComponent,
     CarPanelComponent,
-    ImagePanelComponent
+    ImagePanelComponent,
+    MyCarsComponent
   ],
   imports: [
     BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), FormsModule, HttpClientModule

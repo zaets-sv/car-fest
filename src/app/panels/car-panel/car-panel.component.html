@@ -4,7 +4,7 @@
     <div class='car-img'><img src='assets/images/car.png' [alt]='car.name'></div>
     <div class='car-name'><span>{{car.name}}</span></div>
     <div class='car-model'><span>{{car.model}}</span></div>
-    <div class="div-buy">
+    <div class="div-buy" [hidden]='hideContentForAdmin'>
       <button type="button" class="btn btn-success" (click)="buyCar()">Buy Car</button>
     </div>
     <div class='car-price'><span>{{car.price | currency: 'USD'}}</span></div>
@@ -16,7 +16,7 @@
       <div class='car-img-small'><img src='assets/images/car.png' [alt]='car.name'></div>
       <div class='car-name-small'><span>{{car.name}}</span></div>
       <div class='car-model-small'><span>{{car.model}}</span></div>
-      <div class="div-buy-small">
+      <div class="div-buy-small" [hidden]='hideContentForAdmin'>
         <button type="button" class="btn btn-success">Buy Car</button>
       </div>
       <div class='car-price-small'><span>{{car.price | currency: 'USD'}}</span></div>
