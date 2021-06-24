@@ -13,18 +13,20 @@ export class CarPanelComponent implements OnInit {
   @Input() car!: Car;
   @Input() index = 1;
   url = 'http://localhost:3000/users/';
+  hideContentForAdmin!: boolean;
   userInfo: any;
   persons: any;
   arrayNewCars: number[] = [];
   
   constructor(public http: Http) {
+    this.hideContentForAdmin = JSON.parse(localStorage.getItem('user')!).adminRole
   }
   ngOnInit() {
   }
  
   buyCar() {
     let user = JSON.parse(localStorage.getItem('user')!);
-    console.log(this.url + JSON.parse(localStorage.getItem('user')!).id);
+    //console.log(this.url + JSON.parse(localStorage.getItem('user')!).id);
    
     this.arrayNewCars = user.myCars;
 
@@ -54,7 +56,7 @@ export class CarPanelComponent implements OnInit {
     let userJSON = {
       "name": user.name,
       "email": user.email,
-      "adminRole": true,
+      "adminRole": user.adminRole,
       "password": user.password,
       "myCars": myNewCar,
       "id": user.id
