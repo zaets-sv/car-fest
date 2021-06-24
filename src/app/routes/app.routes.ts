@@ -10,7 +10,6 @@ import { RegistrationComponent } from '../../spa/users/registration/registration
 import { AuthGuard } from '../services/auth-guard.service';
 import { MyCarsComponent } from './my-cars/my-cars.component';
 
-
 export const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegistrationComponent },
