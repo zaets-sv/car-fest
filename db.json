@@ -63,6 +63,7 @@
       "email": "admin@gmail.com",
       "adminRole": false,
       "password": "12345",
+      "myCars": [],
       "id": 1
     },
     {
@@ -70,6 +71,7 @@
       "email": "patokha@gmail.com",
       "adminRole": false,
       "password": "12345",
+      "myCars": [],
       "id": 2
     },
     {
@@ -77,6 +79,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 3
     },
     {
@@ -84,6 +87,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 4
     },
     {
@@ -91,6 +95,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 5
     },
     {
@@ -98,6 +103,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 6
     },
     {
@@ -105,6 +111,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 7
     },
     {
@@ -112,6 +119,7 @@
       "email": "test@mail.ru",
       "adminRole": true,
       "password": "12345",
+      "myCars": [],
       "id": 8
     },
     {
@@ -119,6 +127,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 9
     },
     {
@@ -126,6 +135,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 10
     },
     {
@@ -133,6 +143,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 11
     },
     {
@@ -140,6 +151,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 12
     },
     {
@@ -147,6 +159,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "123",
+      "myCars": [],
       "id": 13
     },
     {
@@ -154,6 +167,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "12345",
+      "myCars": [],
       "id": 14
     },
     {
@@ -161,6 +175,7 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "12345",
+      "myCars": [],
       "id": 15
     },
     {
@@ -168,7 +183,16 @@
       "email": "test@mail.ru",
       "adminRole": false,
       "password": "12345",
+      "myCars": [],
       "id": 16
+    },
+    {
+      "name": "1234567890",
+      "email": "test@mail.ru",
+      "adminRole": false,
+      "password": "12345",
+      "myCars": [],
+      "id": 17
     }
   ]
 }

@@ -4,4 +4,5 @@ export interface User {
   email: string;
   password: string;
   adminRole: boolean;
+  myCars: Array<number>;
 }

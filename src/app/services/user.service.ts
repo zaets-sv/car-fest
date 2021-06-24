@@ -35,10 +35,8 @@ export class UserService implements UserApi {
         if (adminRole === "true") {
           //this.router.navigate(['/authenticated/car-list/3'])
         }
-
         this.isAuthenticated = true;
         localStorage.setItem('user', JSON.stringify(arrayFilter[0]));
-
       } else {
         throw new Error('Invalid email or password');
       }
@@ -57,7 +55,8 @@ export class UserService implements UserApi {
     return this.http.post(this.url, {
       name: registerForm.name, email: registerForm.email,
       adminRole: registerForm.adminRole,
-      password: registerForm.password
+      password: registerForm.password,
+      myCars: []
     });
   }
 }
