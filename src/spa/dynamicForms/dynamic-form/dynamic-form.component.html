@@ -5,7 +5,7 @@
     <span *ngSwitchCase="'edit'">Editing panel</span>
   </div>
 </h3>
-<div>
+<div style="padding-bottom: 15px">
   <form (ngSubmit)="onSubmit()" [formGroup]='form'>
     <div *ngFor="let field of vmDefinition">
       <spa-dynamic-field [field]='field' [form]='form' [operation]='operation' [submitted]='submitted'></spa-dynamic-field>
@@ -27,8 +27,8 @@
         <button class="btn btn-success" type="button" (click)='onCreate()'>Create</button>
       </div>
     </div>
-    <div style="margin-top: 10px" *ngIf="status === 'waiting'">
-      Waiting ...
+    <div style="margin-top: 10px; color: white" *ngIf="status === 'waiting'">
+      <span>Waiting <img class="loaderImage" src='assets/images/loaderDot.gif'></span>
     </div>
   </form>
 </div>

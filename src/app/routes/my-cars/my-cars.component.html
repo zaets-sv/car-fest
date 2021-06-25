@@ -1,12 +1,11 @@
-<!--<h1 style="color: white; display:flex; justify-content: center; align-content: center;">You don't have cars</h1>-->
+<h1 @visibility  *ngIf="myCars.length === 0" style="color: white; display:flex; justify-content: center; align-content: center;">You don't have cars</h1>
 
-<h1 @visibility style="color: white; padding-bottom: 10px">My cars</h1>
-<div class="main" @visibility  *ngFor="let car of myCars">
-<!--<div class="main" @visibility  *ngFor="let car of myCars">-->
-  <div class="group bg-dark" >
+<h1 @visibility *ngIf="myCars.length > 0" style="color: white; padding-bottom: 10px">My cars</h1>
+
+<div class="main" @visibility *ngFor="let car of myCars">
+  <div class="group bg-dark" *screenLarge>
     <div class='index'><span>{{car.id}}</span></div>
-    <div class='car-img'><img src='assets/images/car.png'></div>
-    <!--    <div class='car-img'><img src='assets/images/car.png' [alt]='car.name'></div>-->
+    <div class='car-img'><img src='assets/images/car.png' [alt]='car.name'></div>
     <div class='car-name'><span>{{car.name}}</span></div>
     <div class='car-model'><span>{{car.model}}</span></div>
     <!--<div class="div-buy" [hidden]='hideContentForAdmin'>
@@ -17,15 +16,14 @@
 
   <div class="group-small bg-dark" *screenSmall>
     <div class='title-group-small'>
-      <div class='index-small'><span>1</span></div>
-      <div class='car-img-small'><img src='assets/images/car.png'></div>
-     <!-- <div class='car-img-small'><img src='assets/images/car.png' [alt]='car.name'></div>-->
-      <div class='car-name-small'><span>name</span></div>
-      <div class='car-model-small'><span>model</span></div>
+      <div class='index-small'><span>{{car.id}}</span></div>
+      <div class='car-img-small'><img src='assets/images/car.png' [alt]='car.name'></div>
+      <div class='car-name-small'><span>{{car.name}}</span></div>
+      <div class='car-model-small'><span>{{car.model}}</span></div>
       <!--<div class="div-buy-small" [hidden]='hideContentForAdmin'>
         <button type="button" class="btn btn-success">Buy Car</button>
       </div>-->
-      <div class='car-price-small'><span>111</span></div>
+      <div class='car-price-small'><span>{{car.price | currency: 'USD'}}</span></div>
     </div>
   </div>
 </div>
