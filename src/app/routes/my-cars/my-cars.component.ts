@@ -13,7 +13,6 @@ import { Car } from '../../services/car-interface';
 export class MyCarsComponent implements OnInit {
   allCars!: Array<Car>;
   myCars: Array<Car> = [];
-  count = 0;
   user = JSON.parse(localStorage.getItem('user')!);
   constructor(private appDataService: AppDataService, private route: ActivatedRoute) { }
 

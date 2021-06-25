@@ -11,6 +11,7 @@ import { AppDataService } from 'src/app/services/app-data.service';
 export class CarMaintComponent implements OnInit {
   CarList?: Array<Car>;
   @Input() hideContentForUser!: boolean;
+  @Input() index = 1;
   deleteError?: string | null;
   deleteId?: number | null;
   isDeleting = false;
@@ -34,14 +35,18 @@ export class CarMaintComponent implements OnInit {
     this.deleteError = null;
     this.deleteId =id;
   }
-  deleteCar (id: number) {
+  deleteCar(id: number) {
     this.isDeleting = true;
-    this.appDataService.deleteCar(id).subscribe(c => this.cancelDelete(),
-      (error: any | null | undefined) => {
-    this.deleteError = error;
-    this.isDeleting = false;
-  });
+    this.appDataService.deleteCar(id).subscribe(c => {
+      this.cancelDelete();
+      this.CarList = this.CarList!.filter(carItem => carItem.id !== id);
+    },
+      error => {
+        this.deleteError = error;
+        this.isDeleting = false;
+      });
   }
+
   cancelDelete() {
     this.isDeleting = false;
     this.deleteId = null;

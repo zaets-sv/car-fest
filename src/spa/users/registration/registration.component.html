@@ -3,6 +3,7 @@
   <form novalidate (ngSubmit)="onSubmit(registerForm)" #registerForm='ngForm'>
     <div class='form-group'>
       <input type='text' autocomplete="off" name='name' required placeholder="User name" ngModel #name='ngModel' class='form-control'>
+      <div class='alert alert-danger' *ngIf="nameError">{{nameError}}</div>
       <div class="alert alert-danger" [hidden]='name.valid || name.pristine'>Please enter your name</div>
     </div>
     <div class='form-group'>
